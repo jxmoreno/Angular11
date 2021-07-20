@@ -1,0 +1,45 @@
+<div class='card mb-3' style='max-width: 500px;'>
+  
+  <div class='row g-0'>
+    <div class='col-md-4'>
+      <img src={{product?.imageUrl}} class="img-fluid rounded-start" alt="image"
+      [style.width.px]='imageWidth'
+      style="margin-top:50%">
+    </div>  
+  <div class='col-md-8'>
+    <div class="card-body">
+      <h5 class="card-title">{{pageTitle}}</h5>
+      <p class="card-text">{{product?.description}}</p>
+
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">{{product?.productName}}</li>
+        <li class="list-group-item">{{product?.productCode}}</li>
+        <li class="list-group-item">{{product?.releaseDate}}</li>      
+        <li class="list-group-item">{{product?.price|currency:'USD'}}</li>
+        <li class="list-group-item"><pm-star [rating]='product?.starRating'></pm-star></li>      
+  
+      </ul>
+    </div>
+  </div>
+</div>
+    <!-- <ul class="list-group list-group-flush">
+      <li class="list-group-item">Product name: {{product?.productName}}</li>
+      <li class="list-group-item">{{product?.description}}</li>
+      <li class="list-group-item">{{product?.productCode}}</li>
+      <li class="list-group-item">{{product?.releaseDate}}</li>      
+      <li class="list-group-item">{{product?.price}}</li>
+      <li class="list-group-item">{{product?.starRating}}</li>
+      
+
+    </ul> -->
+
+
+  <div class='card-footer'>
+    <button class='btn btn-outline-secondary'
+            style='width: 80px'
+            (click)='onBack()'>            
+            <i class='fa fa-chevron-left'></i>Back
+    </button>
+
+  </div>
+</div>
